@@ -1,0 +1,362 @@
+@keyframes rotateCheck {
+  0%{
+    transform: rotate(0deg);
+
+  }
+  100%{
+    transform: rotate(360deg);
+
+  }
+}
+
+
+@keyframes btnRevil {
+  0%{
+    opacity: 0;
+
+  transform: scale(0);
+  }
+  100%{
+    opacity: 1;
+  transform: scale(1);
+
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  max-width: 1440px;
+  font-family: Roboto, Arial;
+ }
+
+ .header{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+  margin-bottom: 1%;
+ }
+
+ .logo-div{
+   flex: 1;
+   justify-content: center;
+ }
+
+ .logo-div img{
+  width: 230px;
+  margin-left: 35%;
+ }
+
+ .icon-div{
+    margin-left: 5%;
+    margin-top: 5px;
+    text-decoration: none;
+    color: black;
+ }
+ .fa-arrow-left:before{
+  font-size: 20px;
+ }
+
+ /*---------main image---------*/
+
+ .background-image{
+  margin: 3% 0 0 0;
+  height: 450px;
+  width: 100%;
+  position: relative;
+ }
+
+ .background-image img{
+   width: 100%;
+   height: 100%;
+   background-color: white;
+   object-fit: cover;
+ }
+
+ /*----------------button section ---------------*/
+ /* --  button= ==================================================> */
+
+ .contents{
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  margin-bottom: 2%;
+  margin-top: -3%;
+ }
+
+ .heading{
+  margin: 3% 0 0 1%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+ }
+
+ .heading .fa-heart:before{
+  font-size: 22px;
+ }
+
+ .heading-icon{
+  margin: 1% 3% 0 0;
+ }
+
+ .heading .fa-heart:hover{
+  cursor: pointer;
+ }
+
+ .heading h1 i{
+  font-weight: 900;
+ }
+
+ .row-1,
+ .row-2,
+ .row-3{
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  margin-left: 1%;
+  margin-right: 1%;
+ }
+
+ .row-heading{
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+ }
+
+ .border{
+  width: 3%;
+  height: 3px;
+  background-color: #99E2D0;
+  margin-top: 4px;
+ }
+
+ .buttons-only{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+ }
+
+ .button-div{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  padding: .5rem;
+  width: 31%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.15);
+ }
+
+ .button-div:hover{
+  cursor: pointer;
+ }
+
+ .button-paragraph-and-price{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }
+
+ .button-paragraph{
+  display: flex;
+  flex: 1;
+  margin-right: 4px;
+  text-overflow: dot;
+  white-space: nowrap;
+  overflow: hidden;
+ }
+
+ .contents p{
+  font-size: 13px;
+  color: rgb(96, 96, 96);
+ }
+
+ .price-div{
+  width: 10%;
+  margin-left: 3%;
+ }
+ .contents em{
+  font-weight: bold;
+ }
+
+ .order-button{
+   display: flex;
+   justify-content: center;
+   margin-bottom: 3%;
+ }
+
+ .order-button button{
+  padding: 1% 6% 1% 6%;
+    border-radius: 21px;
+    border: none;
+    color: white;
+    background-color: #FF79DA;
+}
+ 
+.order-button button:hover{
+  cursor: pointer;
+}
+
+
+/*-----------------tablet version------------------*/
+
+@media(max-width: 768px){
+  .button-div{
+    width: 30%;
+  }
+  .border{
+    width: 5%;
+  }
+}
+
+
+/*---------------mobile version-----------------*/
+
+@media(max-width: 700px){
+  .background-image{
+    height: 300px;
+  }
+
+  .logo-div img{
+    width: 180px;
+    margin-left: 20%;
+  }
+
+  .heading h1 i{
+    font-size: 21px;
+  }
+
+  .border{
+    width: 10%;
+  }
+
+  .row-1,
+  .row-2,
+  .row-3{
+    margin: 20px 2% 0 2%;
+    width: 96%;
+  }
+
+  .buttons-only{
+    flex-direction: column;
+  }
+
+  .button-div{
+    width: 96%;
+    margin-bottom: 4%;
+  }
+
+  .order-button button{
+    padding: 3% 13% 3% 13%;
+  }
+
+  .order-button{
+    margin-top: 5%;
+    margin-bottom: 10%;
+  }
+}
+
+/* ---- animations= =======================*/
+.buttons-only .button-div
+{
+  animation: btnRevil 1s linear;
+  animation-delay: .3s;
+  opacity: 0;
+  transform: scale(0);
+  animation-fill-mode: forwards;
+  position: relative;
+
+}
+.price-div{
+  position: absolute;
+  right: -60px;
+  top: 0;
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+  transition: .3s ease-in-out;
+}
+.button-div:hover .price-div{
+  right: 0;
+}
+.price-div span:first-child{
+  margin-bottom: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  height: fit-content;
+  width: fit-content;
+}
+.price-div span:first-child b{
+  display: none;
+}
+.price-div span:last-child{
+  background: #06cbcb98;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  height: 100%;
+  width: 60px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.button-div:hover .price-div span:last-child i{
+  transform: rotate(0deg);
+  animation: .3s rotateCheck linear;
+  animation-fill-mode: forwards;
+}
+
+
+.buttons-only.one .button-div:nth-child(2)
+{
+  animation-delay: .6s;
+
+}
+.buttons-only.one .button-div:last-child
+{
+  animation-delay: .9s;
+
+}
+.buttons-only.two .button-div:first-child
+{
+  animation-delay: 1.2s;
+
+}
+.buttons-only.two .button-div:nth-child(2)
+{
+  animation-delay: 1.5s;
+
+}
+.buttons-only.two .button-div:last-child
+{
+  animation-delay: 1.8s;
+
+}
+
+
+.buttons-only.three .button-div:first-child
+{
+  animation-delay: 2.1s;
+
+}
+.buttons-only.three .button-div:nth-child(2)
+{
+  animation-delay: 2.4s;
+
+}
+.buttons-only.three .button-div:last-child
+{
+  animation-delay: 2.7s;
+
+}
+
+
