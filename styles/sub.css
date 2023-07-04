@@ -282,6 +282,8 @@
   align-items: flex-end;
   gap: 1rem;
   transition: .3s ease-in-out;
+  background: #fff;
+  padding-left: 8px;
 }
 .button-div:hover .price-div{
   right: 0;
