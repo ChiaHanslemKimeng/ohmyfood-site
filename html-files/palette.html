@@ -11,17 +11,25 @@
     <script src="https://kit.fontawesome.com/53be3843b9.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload="myfunction()">
 
     <!-------- loading-animations ==============-->
 
 
-    <!-- <div class="loading-animation">
-        <div class="image-only"></div>
-        <h3>WELCOME</h3>
-    </div> -->
+    <section id="welcome-page">
+        <div id="loader">
+          <div class="image-only">
+            <img src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="#">
+          </div>
+      </div>
+      <h1>PLEASE WAIT</h1>
+      </section>
 
-    <!--------header------>
+   
+
+    <main id="main-el" class="body-main">
+
+         <!--------header------>
 
     <section class="header">
         <a href="../index.html" class="icon-div"><i class="fa-solid fa-arrow-left"></i></a>
@@ -29,8 +37,7 @@
             <img src="../images/logo/ohmyfood.png" alt="#">
         </div>
     </section>
-
-    <!------main image---------->
+              <!------main image---------->
     <section class="background-image">
         <img src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
     </section>
@@ -190,6 +197,22 @@
           </section>
 
     </section>
+    </main>
+
+
+
+    <script>
+        var myVar;
+        
+        function myfunction() {
+          myVar = setTimeout(showPage, 3000);
+        }
+        
+        function showPage() {
+          document.getElementById("welcome-page").style.display = "none";
+          document.getElementById("main-el").style.display = "block";
+        }
+        </script>
 
 </body>
 
